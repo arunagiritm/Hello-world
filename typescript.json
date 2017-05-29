@@ -1,0 +1,60 @@
+{
+	"AngularJs Controller in Typescript": {
+		"prefix": "citi-controller",
+		"body": [
+			"export class ${1:Controller}Controller implements ng.IController {",
+			"\tconstructor(private ${2:dependency1}: dependency1Type) {",
+			"\t\t\"ngInject\";",
+			"}",
+			
+			"}"
+		],
+		"description": "AngularJs Controller in Typescript"
+	},
+	"AngularJs Service in Typescript": {
+		"prefix": "citi-service",
+		"body": [
+			"export class ${1:service}Service  {",
+			"\tconstructor(private ${2:dependency1}: dependency1Type) {",
+			"\t\t\"ngInject\";",
+			"}",
+			
+			"}"
+		],
+		"description": "AngularJs Service in Typescript"
+	},
+	"AngularJs Directive in Typescript": {
+		"prefix": "citi-directive",
+		"body": [
+			"export class ${1:directive}Directive  {",
+			"\tconstructor(private ${2:dependency1}: dependency1Type) {",
+			"\t\t\"ngInject\";",
+			"}",
+			
+			"}"
+		],
+		"description": "AngularJs Directive in Typescript"
+	},
+	"AngularJs Component in Typescript": {
+		"prefix": "citi-component",
+		"body": [
+			"export class ${1:name}Component implements ng.IComponentOptions {",
+			"\tcontroller: ng.IControllerConstructor;",
+			"\ttemplate: any;",
+
+			"\tconstructor() {",
+			"\t\tthis.controller = ${1:name}Controller;",
+			"\t\tthis.template = require('./${1:name}.html');",
+  			  "\t}",
+			"}",
+
+			"class ${1:name}Controller implements ng.IComponentController {",
+			"\n\tconstructor() {",
+			"\t\t\"ngInject\";",
+			"\t}",
+			"\t\\$onInit() {}",
+			"}",
+		],
+		"description": "AngularJs Component in Typescript"
+	}
+}
